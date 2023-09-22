@@ -1,0 +1,89 @@
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #3B3B3B;
+}
+body {
+	background-image: url(../img/fond.jpg);
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-repeat: repeat-x;
+}
+h1 {
+	margin: 0px;
+	padding: 0px;
+}
+h2 {
+	margin: 0px;
+	padding: 0px;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+form {
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	margin-top:-1px;
+	margin-bottom:-1px;
+}
+.FormNormal {
+	border: solid 1px #CCCCCC;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.FormRecherche {
+	border: solid 1px #CCCCCC;
+	border-left: solid 10px #CCCCCC;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.FormRecherche:hover {
+	border: solid 1px #98C216;
+	border-left: solid 10px #98C216;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.FormRecherche:focus {
+	border: solid 1px #98C216;
+	border-left: solid 10px #98C216;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.t1 {
+	font-size: 16px;
+}
+.t2 {
+	font-size: 14px;
+}
+.t3 {
+	font-size: 14px;
+	color: #98C216;
+}
+.t4 {
+	color: #98C216;
+}
+.t5 {
+	color: #000000;
+}
+.t6 {
+	font-size: 12px;
+}
+.t7 {
+	font-size: 10px;
+	color: #999999;
+}

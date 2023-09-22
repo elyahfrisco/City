@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CityCar</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+#video-gallery {
+	width: 100%;
+	border: 1px solid #e9eef2;
+}
+.videoGallery .rsTmb {
+	padding: 20px;
+}
+.videoGallery .rsThumbs .rsThumb {
+	width: 220px;
+	height: 80px;
+	border-bottom: 1px solid #e9eef2;
+	color: #4f5c6a;
+}
+.videoGallery .rsThumbs {
+	width: 220px;
+	padding: 0;
+}
+.videoGallery .rsThumb:hover {
+	background: #8ad542;
+	color: #fff;
+}
+.videoGallery .rsThumb.rsNavSelected {
+	background-color: #4f5c6a;
+	border-bottom: -color #02874A;
+}
+.rsNavSelected h5, .rsThumb:hover h5 {
+	color: #fff !important;
+}
+.sampleBlock {
+	right: 5%;
+	bottom: 5%;
+	width: auto;
+	max-width: 400px;
+	color: #fff;
+	text-align: right;
+	padding: 5px 5px 7px 5px;
+	background: rgba(255,255,255,0.3);
+	border-radius: 3px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+.videoGallery .rsTmb {
+	padding: 6px 8px;
+}
+.videoGallery .rsTmb h5 {
+	font-size: 12px;
+	line-height: 17px;
+}
+.videoGallery .rsThumbs.rsThumbsVer {
+	width: 100px;
+	padding: 0;
+}
+.videoGallery .rsThumbs .rsThumb {
+	width: 100px;
+	height: 47px;
+}
+.videoGallery .rsTmb span {
+	display: none;
+}
+.videoGallery .rsOverflow, .royalSlider.videoGallery {
+	height: 300px !important;
+}
+.sampleBlock {
+	font-size: 14px;
+}
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #43484b;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+.hr {
+	border-bottom: 2px solid #d3dadf;
+	width: 90px;
+	margin: 25px auto 30px;
+}
+.ht {
+	font-size: 40px;
+	color: #43484b;
+	font-weight: 300;
+	font-family: 'Open Sans';
+	margin: 0;
+	text-align: center;
+}
+#wrapper {
+	min-height: 100%;
+	position: relative;
+}
+.dker {
+	background: #f9fbfc;
+	border-bottom: 1px solid #e9eef2;
+	border-top: 1px solid #e9eef2;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.lter {
+	background: #fff;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+a, a:hover, a:active, a:visited {
+	text-decoration: none;
+	color: #8ad542;
+}
+.label-default {
+	background: #4f5c6a;
+	font-weight: 300;
+}
+.flat-green {
+	font-size: 14px;
+	color: #fff !important;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 10px;
+	text-align: center;
+	display: block;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #8ad542;
+	-webkit-box-shadow: 0 2px #73bc2d;
+	-moz-box-shadow: 0 2px #73bc2d;
+	box-shadow: 0 2px #73bc2d;
+	border: none;
+}
+.flat-green:hover {
+	text-decoration: none;
+	background: #7abb3b;
+	color: #fff;
+}
+.lease-btn {
+	max-width: 300px;
+	margin: auto;
+	margin-top: 30px;
+}
+/* Top */
+#top {
+	background: #f9fbfc;
+	border-bottom: 1px solid #e9eef2;
+	padding: 12px 0;
+	font-size: 13px;
+	color: #8c9195;
+}
+.logo {
+	float: left;
+}
+header a span {
+	color: #8c9195;
+}
+#top a {
+	padding-right: 15px;
+}
+#top .fa {
+	padding-right: 10px;
+	font-size: 15px;
+	color: #8c9195;
+}
+/* Nav */
+
+#navigation {
+	z-index: 10;
+	width: 100%;
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	padding: 0px;
+	background: #fff;
+}
+.logo a {
+	font-size: 48px;
+	display: block;
+	padding: 8px 0;
+	font-family: 'City Car', sans-serif;
+}
+.logo a span {
+	color: #4f5c6a;
+}
+/* Menu */
+#menu, #menu li, footer ul, footer li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+#menu li a {
+	display: block;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+/* Featured */
+
+.bk {
+	background: #fff;
+	border: 1px solid #e9e8e6;
+}
+.bk h4 {
+	padding: 10px;
+	margin: 0;
+	font-weight: 300;
+	border-top: 2px solid #8ad542;
+}
+.car {
+	padding: 10px;
+	border-bottom: 1px solid #e9e8e6;
+	font-size: 12px;
+}
+.car a {
+	display: block;
+	font-weight: 700;
+}
+.car .thumbnail {
+	margin: 0 10px 0 0;
+	max-width: 100px;
+}
+/* Lease */
+
+.lease-inner {
+	padding: 25px 30px 20px;
+	background: #fff;
+	border: 1px solid #e9eef2;
+}
+.lease-item img {
+	width: 100%;
+}
+.lease-item h4 {
+	color: #43484b;
+	font-size: 18px;
+	margin: 0px 0 10px;
+	text-align: center;
+	font-weight: 300;
+	font-family: 'Open Sans';
+	line-height: 28px;
+}
+.lease-item span {
+	display: block;
+	text-align: center;
+	font-weight: normal;
+	font-family: 'Open Sans';
+	font-style: italic;
+	font-size: 13px;
+	color: #a0a8ad;
+}
+.lease-item p {
+	font-size: 14px;
+	color: #8c9195;
+	line-height: 26px;
+	margin-bottom: 0;
+	margin-top: 15px;
+	text-align: center;
+}
+.lease-footer {
+	border: 1px solid #e9eef2;
+	padding: 20px;
+	background: #fff;
+	border-top: 0;
+	text-align: center;
+}
+/* Footer */
+footer {
+	width: 100%;
+	background: #14181c;
+	padding-top: 55px;
+}
+#back-to-top {
+	position: absolute;
+	right: 30px;
+	z-index: 1;
+	bottom: 50px;
+}
+#back-to-top a {
+	display: block;
+	text-indent: -9999px;
+	width: 54px;
+	height: 54px;
+	background: url(/img/backtop.png) no-repeat center;
+}
+.f-about i {
+	display: inline;
+	margin-right: 10px;
+	font-size: 15px;
+	color: #848484;
+}
+.inner-footer {
+	position: relative;
+	padding-bottom: 55px;
+}
+.inner-footer h3 {
+	color: #e9e9e9;
+	font-size: 20px;
+	font-weight: 300;
+	font-family: 'Open Sans';
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+footer p {
+	color: #8c9195;
+	font-size: 14px;
+	font-family: 'Open Sans';
+	line-height: 26px;
+}
+.f-about p {
+	display: inline;
+	width: 70%;
+}
+.f-about ul {
+	margin-top: 30px;
+}
+.f-about ul li {
+	margin-bottom: 20px;
+}
+.links a {
+	display: block;
+	border-bottom: 1px solid #2c3033;
+	margin-bottom: 7px;
+	padding-bottom: 7px;
+}
+.inner-footer a {
+	color: #8ad542 !important;
+	font-size: 14px;
+	font-family: 'Open Sans';
+	line-height: 26px;
+}
+.last-div {
+	background: #000000;
+	padding: 20px 0;
+}
+.copyright {
+	color: #8c9195;
+	font-size: 14px;
+	font-family: 'Open Sans';
+	float: left;
+}
+.socials, .socials ul {
+	float: right;
+}
+.socials li {
+	display: inline;
+	margin-left: 10px;
+}
+.last-div a, .last-div a:hover {
+	color: #8c9195;
+}
+/* Search */
+
+.search {
+	padding: 0px 10px;
+}
+.search label {
+	font-weight: 300;
+}
+.form-control {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #f9fbfc;
+	border: solid 1px #e9eef2;
+	color: #8c9195;
+	font-size: 14px;
+	font-family: 'Open Sans';
+	text-indent: 5px;
+	padding: 18px 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.form-control:focus {
+	border-color: #8ad542;
+	outline: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+@media (min-width: 992px) {
+footer {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+.pf {
+	padding-bottom: 524px;
+}
+}
+
+@media (max-width: 992px) {
+.md-mgt {
+	margin-top: 30px;
+}
+}
+
+@media (min-width: 768px) {
+.network {
+	float: left;
+}
+.contact {
+	float: right;
+}
+
+#menu {
+	float: right;
+}
+#menu li {
+	float: left;
+	margin: 0 14px;
+}
+#menu li:hover, #menu .active {
+	float: left;
+	border-bottom: 2px solid #8ad542;
+}
+#menu li a {
+	display: block;
+	padding: 31px 0;
+	color: #4f5c6a;
+}
+.menu-header{
+	float:left;
+}
+.collapse {
+display: block;
+}
+}
+
+@media (max-width: 768px) {
+	.network {
+	max-width: 60%;
+}
+.contact {
+	margin-top: 10px;
+}
+#menu li {
+	padding:5px;
+	background:#4f5c6a;
+	border-bottom:1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+#menu li:hover, #menu .active {
+	color:#fff;
+	background:#8ad542;
+	border-bottom:1px solid rgba(255, 255, 255, 0.8);
+}
+#menu li a {
+	display: block;
+	width:100%;
+	text-align:center;
+	color:#fff;
+}
+.collapse {
+display: none;
+}
+ .navbar-toggle {
+border-color: #ddd;
+margin-top: 25px;
+}
+ .navbar-toggle .icon-bar {
+background-color: #888;
+}
+}
+</style>
+<script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+<div id="wrapper">
+  <header>
+    <section id="top">
+      <div class="container">
+        <div class="network"> <a href="#"><span>Leasing :</span> citylease.fr</a> <a href=""><span>Professionnels :</span> citypro.fr</a> </div>
+        <div class="contact"> <a href="#"><i class="fa fa-envelope"></i> contact@city-car.fr </a> <i class="fa fa-phone"></i> 01 41 34 31 45 </div>
+      </div>
+    </section>
+    <nav id="navigation">
+      <div class="container">
+      <div class="menu-header clearfix">
+        <div class="logo"> <a href="#"><span>City</span>Car</a> </div>
+        <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#menu">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            </div>
+        <ul id="menu" class="collapse">
+          <li class="active"><a href="#">Accueil</a></li>
+          <li><a href="#">Offres</a></li>
+          <li><a href="#">Engagements</a></li>
+          <li><a href="#">Véhicules</a></li>
+          <li><a href="#">Sélection</a></li>
+          <li><a href="#">Leasing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="dker" id="featured">
+    <div class="container npl">
+      <div class="row">
+        <div class="col-md-8">
+          <div id="video-gallery" class="royalSlider videoGallery rsDefault">
+            <div class="rsContent"> <a class="rsImg" href="http://city-car.fr/images/7lgApLZaKqF0BObNLfeh9E6vlK.jpg">
+              <div class="rsTmb">
+                <h5>Peugeot 208 Allure</h5>
+                <span>HDI Noir <strong>289€</strong></span> </div>
+              </a>
+              <div class="rsABlock sampleBlock"><a href="#" class="flat-green">Leasing : Peugeot 208 Allure</a></div>
+            </div>
+            <div class="rsContent"> <a class="rsImg" href="http://city-car.fr/images/7lgApLZaKqF0BObNLfeh9E6vlK.jpg">
+              <div class="rsTmb">
+                <h5>Peugeot 209 Allure</h5>
+                <span>HDI Noir <strong>189€</strong></span> </div>
+              </a>
+              <div class="rsABlock sampleBlock"><a href="#" class="flat-green">Leasing : Peugeot 208 Allure</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bk md-mgt">
+            <h4>Leasing : nos promotions</h4>
+            <div class="car clearfix"> <img src="http://city-car.fr/images/7lgApLZaKqF0BObNLfeh9E6vlK.jpg" class="thumbnail pull-left"> <a href="#">PEUGEOT
+              208 ALLURE HDI NOIR</a> <span class="label label-default">289€ / mois*</span> </div>
+            <div class="car clearfix"> <img src="http://city-car.fr/images/7lgApLZaKqF0BObNLfeh9E6vlK.jpg" class="thumbnail pull-left"> <a href="#">PEUGEOT
+              208 ALLURE HDI NOIR</a> <span class="label label-default">289€ / mois*</span> </div>
+            <div class="car clearfix"> <img src="http://city-car.fr/images/7lgApLZaKqF0BObNLfeh9E6vlK.jpg" class="thumbnail pull-left"> <a href="#">PEUGEOT
+              208 ALLURE HDI NOIR</a> <span class="label label-default">289€ / mois*</span> </div>
+            <div class="car clearfix visible-lg-block"> <img src="http://city-car.fr/images/7lgApLZaKqF0BObNLfeh9E6vlK.jpg" class="thumbnail pull-left"> <a href="#">PEUGEOT
+              208 ALLURE HDI NOIR</a> <span class="label label-default">289€ / mois*</span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container lter">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="bk">
+          <h4>Recherche rapide</h4>
+          <form role="form" class="search">
+            <div class="form-group">
+              <select class="form-control" id="categorie" name="categorie">
+                <option selected>Choisir une catégorie</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="form-control" id="marque" name="marque">
+                <option selected>Choisir une marque</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="form-control" id="modele" name="modele">
+                <option selected>Choisir un modèle</option>
+              </select>
+            </div>
+            <button type="submit" class="flat-green">Rechercher</button>
+            <a href="#">Accéder à la recherche détaillée</a>
+          </form>
+          <p></p>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h1>CityCar : achat de voitures en leasing </h1>
+        <h2>H2 Introduction 300 chars</h2>
+        <p>300 mots minimum - "leasing" word density between 2% and 4%</p>
+        <h3>Sous-titres H3 70 chars</h3>
+      </div>
+    </div>
+  </div>
+  <div class="dker ">
+    <div class="container pf">
+      <h3 class="ht">Leasing CityCar</h3>
+      <div class="hr"></div>
+      <div class="row">
+        <div class="col-sm-3 lease-item"> <img src="/img/leasing-smart.jpg">
+          <div class="lease-inner">
+            <h4>Smart Fortwo</h4>
+            <span>passion MHD</span>
+            <p>Description.</p>
+          </div>
+          <div class="lease-footer"> <a href="#"><i class="fa fa-bookmark"></i> En leasing à partir de 290€ </a>
+            </li>
+          </div>
+        </div>
+        <div class="col-sm-3 lease-item"> <img src="/img/leasing-smart.jpg">
+          <div class="lease-inner">
+            <h4>Smart Fortwo</h4>
+            <span>passion MHD</span>
+            <p>Description.</p>
+          </div>
+          <div class="lease-footer"> <a href="#"><i class="fa fa-bookmark"></i> En leasing à partir de 290€ </a>
+            </li>
+          </div>
+        </div>
+        <div class="col-sm-3 lease-item"> <img src="/img/leasing-smart.jpg">
+          <div class="lease-inner">
+            <h4>Smart Fortwo</h4>
+            <span>passion MHD</span>
+            <p>Description.</p>
+          </div>
+          <div class="lease-footer"> <a href="#"><i class="fa fa-bookmark"></i> En leasing à partir de 290€ </a>
+            </li>
+          </div>
+        </div>
+        <div class="col-sm-3 lease-item"> <img src="/img/leasing-smart.jpg">
+          <div class="lease-inner">
+            <h4>Smart Fortwo</h4>
+            <span>passion MHD</span>
+            <p>Description.</p>
+          </div>
+          <div class="lease-footer"> <a href="#"><i class="fa fa-bookmark"></i> En leasing à partir de 290€ </a>
+            </li>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="flat-green lease-btn">Toutes nos voitures en leasing</a> </div>
+  </div>
+  <footer>
+    <div class="inner-footer container">
+      <div class="row">
+        <div class="col-sm-3 f-about">
+          <h3>À propos de CityCar</h3>
+          <p>CityCar est une société spécialisée dans la vente de véhicules d'occasions toutes marques à des prix imbattables. </p>
+          <ul>
+            <li><i class="fa fa-envelope"></i><a href="#">contact@city-car.fr</a></li>
+            <li><i class="fa fa-phone"></i>
+              <p>01 41 34 31 45</p>
+            </li>
+            <li><i class="fa fa-home"></i>
+              <p>51 Rue Aristide Briand<br>
+                92300 Levallois Perret</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-3 links">
+          <h3>Marques de voiture</h3>
+          <ul>
+            <li><a href="#">Renault</a></li>
+            <li><a href="#">Peugeot</a></li>
+            <li><a href="#">Citroën</a></li>
+            <li><a href="#">Mercedez-Bens</a></li>
+            <li><a href="#">Dacia</a></li>
+            <li><a href="#">Porsche</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3 recent">
+          <h3>Leasing à Boulogne</h3>
+          <ul>
+            <li><a href="#"><img src="upload/recent1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="upload/recent2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="upload/recent3.jpg" alt=""></a></li>
+            <li><a href="#"><img src="upload/recent4.jpg" alt=""></a></li>
+            <li><a href="#"><img src="upload/recent5.jpg" alt=""></a></li>
+            <li><a href="#"><img src="upload/recent6.jpg" alt=""></a></li>
+            <li><a href="#"><img src="upload/recent7.jpg" alt=""></a></li>
+            <li><a href="#"><img src="upload/recent8.jpg" alt=""></a></li>
+            <li><a href="#"><img src="upload/recent9.jpg" alt=""></a></li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="col-sm-3 twitter">
+          <h3>Actualités du leasing</h3>
+          <div id="example2" class="clearfix">
+            <ul>
+              <li>
+                <div class="user"> </div>
+                <p class="tweet"></p>
+                <p class="interact"></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="back-to-top"> <a href="#top">Back to Top</a> </div>
+    </div>
+    <div class="last-div">
+      <div class="container">
+        <div class="copyright"> © 2014 Tous droits réservés | <a href="#">CityCar</a> </div>
+        <div class="socials">
+          <ul>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- /container --> <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>')</script> 
+<script src="/js/vendor/bootstrap.min.js"></script> 
+<script src="/js/plugins.js"></script> 
+<script src="/js/main.js"></script> 
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --> 
+<script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+</body>
+</html>
